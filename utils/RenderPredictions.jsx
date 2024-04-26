@@ -30,14 +30,6 @@ export const renderPredictions = (predictions, ctx) => {
 
     ctx.fillStyle = "#000000";
     ctx.fillText(prediction.class, x, y);
-
-    if (isPerson) {
-      playAudio();
-    }
   });
 };
 
-const playAudio = throttle(() => {
-  const audio = new Audio("/pols-aagyi-pols.mp3");
-  audio.play();
-}, 2000);
